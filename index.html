@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Pedro Cruz">
+  <meta name="description" content="Portifólio feito por Pedro Cruz">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="icon" type="imagem/png" href="./images/icon.png">
+  <title>Portifólio Pedro Cruz</title>
+</head>
+
+<body>
+  <header id="cabecalho" class="cabecalho">
+    <img class="cabecalho-foto" src="./images/fotoPedro.jpg" alt="Foto Pedro Cruz">
+    <div class="cabecalho-principal">
+      <div>
+        <span class="cabecalho-logo">PEDRO CRUZ</span>
+      </div> 
+  
+      <nav>
+        <ul class="cabecalho-menu">
+          <li><a class="cabecalho-menu-links menu-primeiro" href="#cabecalho">HOME</a></li>
+          <li><a class="cabecalho-menu-links" href="#projetos">PROJETOS</a></li>
+          <li><a class="cabecalho-menu-links" href="#contato">CONTATO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="introducao">
+    <div class="introducao-principal">
+      <h1 class="introducao-titulo"><span class="introducao-simbolo">&lt/&gt</span> Olá, eu sou o <span style="color: #4B6CC1">Pedro</span>.</h1>
+      <p class="introducao-escrita-p">
+        Tenho 17 anos e estou em busca da minha primeira oportunidade de trabalho com programação. Atualmente,
+        estou me aprofundando em tecnologias como HTML, CSS, JavaScript e Firebase Firestore.<br><br>
+
+        <strong>Acesse o meu perfil no <a class="links-redes" href="https://github.com/pedrohmcruz" target="_blank">GitHub</a> e no <a class="links-redes" href="https://www.linkedin.com/in/pedrohmcruz/" target="_blank">Linkedin</a>.</strong>
+      </p>
+    </div>
+  </section>
+
+  <main id="projetos" class="projetos">
+    <h2 class="projetos-titulo">Projetos</h2>
+
+    <div>
+
+      <div class="projetos-jogo-da-velha">
+        <h3 class="titulo-jogo-da-velha">Jogo da Velha</h3>
+        <a class="pagina-projeto" href="https://pedrohmcruz.github.io/jogo-da-velha/" target="_blank">Abra o projeto</a>
+        <p class="projetos-paragrafo">
+          Esse jogo foi feito utilzando HTML, CSS e JavaScript. Meu primeiro jogo feito em uma página web.
+        </p>
+
+        <a class="projeto-link-repositorio" href="https://github.com/pedrohmcruz/jogo-da-velha" target="_blank">Link do repositório -></a>
+      </div>
+      
+      <div class="projeto-churras">
+        <h3 class="titulo-churrascometro">Churrascômetro</h3>
+        <a class="pagina-projeto" href="https://pedrohmcruz.github.io/projeto-churras-progbr/" target="_blank">Abra o projeto</a>
+        <p class="projetos-paragrafo">
+          Esse jogo foi feito utilzando HTML, CSS e JavaScript. O projeto consiste em calcular a quantidade de carne e bedida 
+          que cada pessoa terá que levar em um churrasco com base no número de adultos, crianças e duração do churrasco.
+        </p>
+
+        <a class="projeto-link-repositorio" href="https://github.com/pedrohmcruz/projeto-churras-progbr" target="_blank">Link do repositório -></a>
+      </div>
+    </div>
+  </main>
+
+  <footer id="contato" class="contato">
+    <h2 class="contato-titulo">Contato</h2>
+    <p class="contato-paragrafo">
+      Entre em contato comigo preenchendo os campos a seguir. Assim que enviado, as informações serão 
+      armazenadas na minha coleção do Firebase Firestore.
+    </p>
+
+    <div class="contato-inputs">
+
+      <div class="inputs-nome-email">
+
+        <div class="contato-inputs-nome">
+          <span class="nome-inputs">Nome <span style="color: orange">*</span></span>
+          <input id="nome-input" type="text" class="input-nome" name="nome">
+        </div>
+
+        <div class="contato-inputs-email">
+          <span class="nome-inputs">Email <span style="color: orange">*</span></span>
+          <input id="email-input" class="input-email" type="text" name="email">
+        </div>
+
+      </div>
+
+      <div class="inputs-assunto-mensagem">
+
+        <div class="contato-inputs-assunto">
+          <span class="nome-inputs">Assunto <span style="color: orange">*</span></span>
+          <input id="assunto-input" class="input-assunto" type="text" name="assunto">
+        </div>
+  
+        <div class="contato-inputs-mensagem">
+          <span class="nome-inputs">Mensagem <span style="color: orange">*</span></span>
+          <textarea id="mensagem-input" class="input-mensagem mensagem" type="text"></textarea> 
+        </div>
+
+      </div>
+
+      <div class="container-botao">
+        <button id="btn" class="botao" onclick="receberDados()"><strong>ENVIAR</strong></button>
+      </div>
+
+      <div class="modal-container">
+        <div class="modal-filho">
+          <h6 class="modal-titulo">Mensagem enviada!</h6>
+          <button class="modal-botao" onclick="sumirModal()">OK</button>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
